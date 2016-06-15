@@ -5,7 +5,7 @@ client = session.client('ses', region_name='eu-west-1')
 
 def send_email(to, subject, body):
     response = client.send_email(
-        Source='167762@wizard.uek.krakow.pl',
+        Source='s167762@wizard.uek.krakow.pl',
         Destination={
             'ToAddresses': [
                 to,
@@ -30,8 +30,8 @@ def send_email(to, subject, body):
         ReplyToAddresses=[
             '167762@wizard.uek.krakow.pl',
         ],
-        ReturnPath='167762@wizard.uek.krakow.pl'
+        ReturnPath='s167762@wizard.uek.krakow.pl'
     )
     return response 
 
-print send_email('167762@wizard.uek.krakow.pl', 'test', 'test')
+print send_email('s167762@wizard.uek.krakow.pl', 'test', 'test')

@@ -5,19 +5,20 @@
   <link rel="stylesheet" href="https://rawgit.com/enyo/dropzone/master/dist/dropzone.css">
   </head>
  <body>
-  <h1>Tworzenie albumu PDF</h1>
+  <h1>Here you can create your own album</h1>
   <div class="dropzone" id="dropzoneForm">
   </div>
   <form class="requestAlbumForm" action="{{url_for('request_album_creation')}}" method="POST">
      <input name="email" type="text"/>
-     <button type="submit">Stwórz album</button>
+     <button type="submit">Create Album</button>
   </form>
   <script type="text/javascript">
    var createInput = function(count, path) {
-       	 var input = '<input type="hidden" class="photo" name="photos___number__ value="__value__"/>"'
+       	 var input = '<input type="hidden" class="photo" name="photos___number__" value="__value__"/>"'
          input = input.replace('__number__', count);
-         input = input.replace('__value__', path);
+         input = input.replace('__value__',  path);
          console.log(input)
+
        	 return	input;
        }
    $(".dropzone").dropzone({
@@ -35,4 +36,5 @@
      }
    });
   </script>
- </body> </html>
+ </body>
+</html>

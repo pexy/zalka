@@ -12,6 +12,6 @@ def html_doc(variables):
         variables=variables
     )
 
- def create(albumData):
+def create(albumData):
   pdf = create_pdf(html_doc(albumData))
   return pdf
